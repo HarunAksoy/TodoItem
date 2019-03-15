@@ -1,9 +1,9 @@
 .welcome {
-    width: 15%;
-    margin: 0 auto;
-    margin-top: 2.5%;
-    border-radius: 2px solid black;
-}
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
 .text {
     margin-bottom: 5%;
@@ -15,4 +15,8 @@ h1 {
 
 a {
     margin-right: 21px;
+}
+
+button {
+    margin-left: 50%;
 }

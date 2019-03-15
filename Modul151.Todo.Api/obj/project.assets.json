@@ -13191,11 +13191,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\projects - module\\Modul151\\todo\\Modul151.Todo.Api\\Modul151.Todo.Api.csproj",
+      "projectUniqueName": "C:\\projects - module\\Modul151\\TodoItem\\Modul151.Todo.Api\\Modul151.Todo.Api.csproj",
       "projectName": "Modul151.Todo.Api",
-      "projectPath": "C:\\projects - module\\Modul151\\todo\\Modul151.Todo.Api\\Modul151.Todo.Api.csproj",
+      "projectPath": "C:\\projects - module\\Modul151\\TodoItem\\Modul151.Todo.Api\\Modul151.Todo.Api.csproj",
       "packagesPath": "C:\\Users\\vmadmin\\.nuget\\packages\\",
-      "outputPath": "C:\\projects - module\\Modul151\\todo\\Modul151.Todo.Api\\obj\\",
+      "outputPath": "C:\\projects - module\\Modul151\\TodoItem\\Modul151.Todo.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

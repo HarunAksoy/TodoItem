@@ -54,3 +54,17 @@ C:\projects - module\Modul151\todo\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Mod
 C:\projects - module\Modul151\todo\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.RazorTargetAssemblyInfo.cache
 C:\projects - module\Modul151\todo\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.dll
 C:\projects - module\Modul151\todo\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.pdb
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\bin\Debug\netcoreapp2.2\Modul151.Todo.Api.deps.json
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\bin\Debug\netcoreapp2.2\Modul151.Todo.Api.runtimeconfig.json
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\bin\Debug\netcoreapp2.2\Modul151.Todo.Api.runtimeconfig.dev.json
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\bin\Debug\netcoreapp2.2\Modul151.Todo.Api.dll
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\bin\Debug\netcoreapp2.2\Modul151.Todo.Api.pdb
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.csprojAssemblyReference.cache
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.csproj.CoreCompileInputs.cache
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.RazorAssemblyInfo.cache
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.RazorAssemblyInfo.cs
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.AssemblyInfoInputs.cache
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.AssemblyInfo.cs
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.RazorTargetAssemblyInfo.cache
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.dll
+C:\projects - module\Modul151\TodoItem\Modul151.Todo.Api\obj\Debug\netcoreapp2.2\Modul151.Todo.Api.pdb

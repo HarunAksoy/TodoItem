@@ -1,5 +1,7 @@
 .container {
-        width: 25%;
-        margin: 0 auto;
-        margin-top: 10%;
+    position: fixed;
+    width: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     }
