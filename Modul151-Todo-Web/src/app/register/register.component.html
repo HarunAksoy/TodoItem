@@ -1,0 +1,88 @@
+<!-- Material form register -->
+<div class="card">
+
+  <h5 class="card-header info-color white-text text-center py-4">
+    <strong>Sign up</strong>
+  </h5>
+
+  <!--Card content-->
+  <div class="card-body px-lg-5 pt-0">
+
+    <!-- Form -->
+    <form [formGroup]="service.formModel" autocomplete="off" class="text-center" style="color: #757575;" (submit)="onSubmit()">
+
+      <div class="form-row required">
+        <div class="col">
+          <!-- First name -->
+          <div class="md-form">
+            <input formControlName="Username" type="text" id="materialRegisterFormUsername" class="form-control">
+            <label for="materialRegisterFormUsername">Username</label>
+            <small *ngIf="service.formModel.get('Username').touched && service.formModel.get('Username').errors?.required" class="form-text text-muted mb-4">
+              This field is required!
+            </small>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- E-mail -->
+      <div class="md-form mt-0">
+        <input formControlName="Email" type="email" id="materialRegisterFormEmail" class="form-control">
+        <label for="materialRegisterFormEmail">Email</label>
+        <small *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.required" class="form-text text-muted mb-4">
+          This field is required!
+        </small>
+        <small *ngIf="service.formModel.get('Email').touched && service.formModel.get('Email').errors?.email" class="form-text text-muted mb-4">
+          Invalid email address!
+        </small>
+      </div>
+
+      <!-- Password -->
+      <div formGroupName="Passwords">
+      <div class="md-form">
+        <input formControlName="Password" type="password" id="materialRegisterFormPassword" class="form-control required"
+          aria-describedby="materialRegisterFormPasswordHelpBlock">
+        <label for="materialRegisterFormPassword">Password</label>
+        <small *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.required" id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          This field is required!
+        </small>
+        <small *ngIf="service.formModel.get('Passwords.Password').touched && service.formModel.get('Passwords.Password').errors?.minlength" id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          At least 8 characters
+        </small>
+      </div>
+
+       <!-- Confirm Password -->
+       <div class="md-form">
+        <input formControlName="ConfirmPassword" type="password" id="materialRegisterFormPasswordConfirm" class="form-control required"
+          aria-describedby="materialRegisterFormPasswordHelpBlock">
+        <label for="materialRegisterFormPasswordConfirm">Password Confirm</label>
+        <small *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.required" id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          This field is required!
+        </small>
+        <small *ngIf="service.formModel.get('Passwords.ConfirmPassword').touched && service.formModel.get('Passwords.ConfirmPassword').errors?.passwordMismatch" id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+          Confirm password does not match!
+        </small>
+  
+      </div>
+      
+    </div>
+
+      
+
+
+
+      <!-- Sign up button -->
+      <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" [disabled]="!service.formModel.valid">Sign
+        up</button>
+        <p>Already a member?
+          <a href="login">Login</a>
+      </p>
+
+
+    </form>
+    <!-- Form -->
+
+  </div>
+
+</div>
+<!-- Material form register -->

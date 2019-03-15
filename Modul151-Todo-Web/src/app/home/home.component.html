@@ -1,0 +1,175 @@
+<!--Todo Items-->
+
+<div class="homebox">
+    <ul class="nav nav-tabs nav-justified md-tabs blue lighten-4" style="margin-bottom: 1px;" id="myTabJust" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab-just" data-toggle="tab" href="#home-just" role="tab" aria-controls="home-just"
+            aria-selected="true"><b>My Items</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab-just" data-toggle="tab" href="#profile-just" role="tab" aria-controls="profile-just"
+            aria-selected="false"><b>All Items</b></a>
+        </li>
+      </ul>
+  <div class="tab-content card" id="myTabContentJust">
+    <div class="tab-pane fade show active" id="home-just" role="tabpanel" aria-labelledby="home-tab-just">
+            <div class="scroll">
+              <div *ngFor="let ti of todoitem">
+                  <ng-template [ngIf]="ti.user_Id == myid">
+                      <div class="accordion md-accordion accordion-1" id="accordionEx23" role="tablist">
+                  <div class="card">
+                    <div class="card-header blue lighten-3 z-depth-1" role="tab" id="heading96">
+                      <h5 class="text-uppercase mb-0 py-1">
+                        <a class="white-text font-weight-bold" data-toggle="collapse" href="#collapse96" aria-expanded="true"
+                          aria-controls="collapse96">
+                          {{ti.name}}
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapse96" class="collapse show" role="tabpanel" aria-labelledby="heading96"
+                      data-parent="#accordionEx23">
+                      <div class="card-body">
+                        <button class="fas fa-trash" style="float: right;" (click)="deleteItem(ti.id)"></button>
+                        <button class="fas fa-edit" style="float: right; margin-right: 10px;" (click)="editItem(ti)" data-toggle="modal" data-target="#modalContactForm" ></button>
+                        <div class="row my-4">
+                            
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Message:</h5>
+                            <p class="">{{ti.message}}</p>
+                          </div>
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Importance:</h5>
+                            <p class="">{{ti.importance}}</p>
+                          </div>
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Deadline:</h5>
+                            <p class="">{{ti.date}}</p>
+                          </div>
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Is complete?</h5>
+                            <input type="checkbox" style="width: 30px; height: 30px;" disabled>
+                          </div>
+          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                    </ng-template>
+              </div>
+            </div>
+          </div>
+          <!--Todoitems-->
+
+          <!--TodoitemsAll-->
+          <div class="tab-pane fade" id="profile-just" role="tabpanel" aria-labelledby="profile-tab-just">
+            <div class="scroll">
+              <div *ngFor="let ti of todoitem">
+                <div class="accordion md-accordion accordion-1" id="accordionEx23" role="tablist">
+                  <div class="card">
+                    <div class="card-header blue lighten-3 z-depth-1" role="tab" id="heading96">
+                      <h5 class="text-uppercase mb-0 py-1">
+                        <a class="white-text font-weight-bold" data-toggle="collapse" href="#collapse96" aria-expanded="true"
+                          aria-controls="collapse96">
+                          {{ti.name}}
+                        </a>
+                      </h5>
+                    </div>
+                    <div id="collapse96" class="collapse show" role="tabpanel" aria-labelledby="heading96"
+                      data-parent="#accordionEx23">
+                      <div class="card-body">
+                        <button class="fas fa-trash" style="float: right;" (click)="deleteItem(ti.id)"></button>
+                        <button class="fas fa-edit" style="float: right; margin-right: 10px;" (click)="editItem(ti)" data-toggle="modal" data-target="#modalContactForm" ></button>
+                        <div class="row my-4">
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Message:</h5>
+                            <p class="">{{ti.message}}</p>
+                          </div>
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Importance:</h5>
+                            <p class="">{{ti.importance}}</p>
+                          </div>
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Deadline:</h5>
+                            <p class="">{{ti.date}}</p>
+                          </div>
+                          <div class="col-md-8">
+                            <h5 class="font-weight-bold mb-3 black-text">Is complete?</h5>
+                            <input type="checkbox" style="width: 30px; height: 30px;" disabled>
+                          </div>
+          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+            <!--TodoitemsAll-->
+    </div>
+    
+  </div>
+
+
+<!--POST Form-->
+<form autocomplete="off" (submit)="onSubmit(form)" method="POST">
+  <input type="hidden" [value]="todoitemservice.formData.user_id">
+  <div class="modal fade" id="modalContactForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title w-100 font-weight-bold">New Task</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5">
+            <i class="fas fa-user prefix grey-text"></i>
+            <input type="text" id="form34" class="form-control validate" name="Name" [(ngModel)]="todoitemservice.formData.name">
+            <label data-error="wrong" data-success="right" for="form34">Name</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-calendar-alt prefix grey-text"></i>
+            <input type="date" id="form29" class="form-control validate" name="Date" #Date="ngModel" [(ngModel)]="todoitemservice.formData.date">
+            <label data-error="wrong" data-success="right" for="form29">Date</label>
+          </div>
+
+          <div class="md-form mb-5">
+            <i class="fas fa-tag prefix grey-text"></i>
+            <select style="width: 91%; margin-left: 40px;" name="Importance" #Importance="ngModel" [(ngModel)]="todoitemservice.formData.importance">
+              <option *ngFor="let op of options" value="{{op.name}}">{{op.name}}</option>
+            </select>   
+            <label style="top: -1.500rem;" data-error="wrong" data-success="right" >Importance</label>
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <textarea type="text" id="form8" class="md-textarea form-control" rows="4"
+            name="Message" #Message="ngModel" [(ngModel)]="todoitemservice.formData.message"></textarea>
+            <label data-error="wrong" data-success="right" for="form8">Your message</label>
+          </div>
+
+        </div>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-unique" type="submit">Create <i class="fas fa-paper-plane-o ml-1"></i></button>
+          <button class="btn btn-unique"data-dismiss="modal">Close <i class="fas fa-paper-plane-o ml-1"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+<!--POST Form-->
+
+
+  
+<!--Create Button-->
+<div class="leftbox">
+  <a href="" class="btn btn-default btn-rounded mb-4" data-toggle="modal" data-target="#modalContactForm">Create new
+    Task</a>
+</div>
+<!--Create Button-->
+

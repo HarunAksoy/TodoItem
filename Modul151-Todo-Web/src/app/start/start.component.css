@@ -1,0 +1,18 @@
+.welcome {
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+    border-radius: 2px solid black;
+}
+
+.text {
+    margin-bottom: 5%;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    margin-right: 21px;
+}
