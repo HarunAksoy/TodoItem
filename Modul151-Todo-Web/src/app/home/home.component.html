@@ -129,13 +129,13 @@
           <div class="md-form mb-5">
             <i class="fas fa-user prefix grey-text"></i>
             <input type="text" id="form34" class="form-control validate" name="Name" [(ngModel)]="todoitemservice.formData.name">
-            <label data-error="wrong" data-success="right" for="form34">Name</label>
+            <label style="top: -0.5rem;" for="form34">Name</label>
           </div>
 
           <div class="md-form mb-5">
             <i class="fas fa-calendar-alt prefix grey-text"></i>
-            <input type="date" id="form29" class="form-control validate" name="Date" #Date="ngModel" [(ngModel)]="todoitemservice.formData.date">
-            <label data-error="wrong" data-success="right" for="form29">Date</label>
+            <input type="datetime-local" id="form29" class="form-control validate" name="Date" #Date="ngModel" [(ngModel)]="todoitemservice.formData.date">
+            <label style="top: -1.500rem;" for="form29">Date</label>
           </div>
 
           <div class="md-form mb-5">
@@ -143,14 +143,14 @@
             <select style="width: 91%; margin-left: 40px;" name="Importance" #Importance="ngModel" [(ngModel)]="todoitemservice.formData.importance">
               <option *ngFor="let op of options" value="{{op.name}}">{{op.name}}</option>
             </select>   
-            <label style="top: -1.500rem;" data-error="wrong" data-success="right" >Importance</label>
+            <label style="top: -1.500rem;" >Importance</label>
           </div>
 
           <div class="md-form">
             <i class="fas fa-envelope prefix grey-text"></i>
             <textarea type="text" id="form8" class="md-textarea form-control" rows="4"
             name="Message" #Message="ngModel" [(ngModel)]="todoitemservice.formData.message"></textarea>
-            <label data-error="wrong" data-success="right" for="form8">Your message</label>
+            <label for="form8">Your message</label>
           </div>
 
         </div>

@@ -86,8 +86,7 @@ export class HomeComponent implements OnInit {
       },
       err => {
         console.log(err);
-        this.toastr.error('Attribute is missing','Failed');
-        
+        this.toastr.error('Date is not valid (time)','Failed');
 
       }
 
