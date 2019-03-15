@@ -1,0 +1,16 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace Modul151.Todo.Api.Models
+
+{
+ public class ApplicationUserModel
+ {
+     public string Username { get; set; }
+     public string Email {  get; set; }
+     public string Password { get; set; }
+     public IEnumerable<TodoItem> TodoItems { get; set; }    
+ }
+}
